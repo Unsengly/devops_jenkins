@@ -29,12 +29,12 @@ pipeline {
     post{
             success{
                 sh '''
-                sh success-deploy.sh;\
+                sh 1-success-deploy.sh;\
                 '''
             }
             failure{
                 sh '''
-                sh fail-deploy.sh;\
+                sh 2-fail-deploy.sh;\
                 '''
             }
     }
